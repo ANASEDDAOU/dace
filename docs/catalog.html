@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dace - Catalogus</title>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Één enkele CSS voor de Catalogus -->
+  <link rel="stylesheet" href="/public/css/cata.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">Dace</div>
+      <div class="nav-toggle" onclick="document.querySelector('.nav-list').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalogus</a></li>
+        <li><a href="about.html">Over Ons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Catalogus</h1>
+
+    <!-- Filter Knoppen -->
+    <div class="filters">
+      <button data-cat="all" class="filter-btn active">Alles</button>
+      <button data-cat="streetwear" class="filter-btn">Streetwear</button>
+      <button data-cat="vintage" class="filter-btn">Vintage</button>
+      <button data-cat="accessoire" class="filter-btn">Accessoire</button>
+    </div>
+
+    <!-- Streetwear Sectie -->
+    <section id="streetwear" class="product-section fade-in">
+      <h2 class="section-title">Streetwear</h2>
+      <div class="product-grid" id="streetwearGrid"></div>
+    </section>
+
+    <!-- Vintage Sectie -->
+    <section id="vintage" class="product-section fade-in">
+      <h2 class="section-title">Vintage</h2>
+      <div class="product-grid" id="vintageGrid"></div>
+    </section>
+
+    <!-- Accessoire Sectie -->
+    <section id="accessoire" class="product-section fade-in">
+      <h2 class="section-title">Accessoire</h2>
+      <div class="product-grid" id="accessoireGrid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Pagina’s</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalogus</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Volg ons</h4>
+        <ul class="social-list">
+          <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.tiktok.com/r"><i class="fab fa-tiktok"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>info@dace.com<br>+32 471078183</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Dace. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+  <script src="/public/js/app.js"></script>
+  <script src="/public/js/product.js"></script>
+  <script src="/public/js/cart.js"></script>
+  
+</body>
+
+</html>

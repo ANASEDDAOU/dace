@@ -1,0 +1,200 @@
+/* ========= Hero ========= */
+.hero {
+    height: 100vh;
+    background: url('/images/hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-content {
+    max-width: 600px;
+  }
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    margin-bottom: 0.5rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .highlight {
+    color: #e91e63;
+  }
+  
+  /* ========= Intro (link naar Over Ons) ========= */
+  .intro {
+    background: #1a1a1a;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  .intro p {
+    font-size: 1.1rem;
+  }
+  .link-btn {
+    color: #e91e63;
+    text-decoration: underline;
+    margin-left: 0.5rem;
+  }
+  
+  /* ========= Gallery ========= */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 3rem 0;
+  }
+  .gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* ========= CTA knoppen sectie ========= */
+  .cta {
+    text-align: center;
+    padding: 3rem 0;
+  }
+  
+  /* ========= Motto-sectie ========= */
+  .motto-section {
+    background: #111;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .motto {
+    font-size: 2rem;
+    font-style: italic;
+    color: #fff;
+    opacity: 0.85;
+  }
+  .motto-section.visible .motto {
+    opacity: 1;
+  }
+  
+  /* ========= Foto-sectie ========= */
+  .photo-section {
+    background: #1a1a1a;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  .small-photo {
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .small-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.8);
+  }
+/* ===== Hero ===== */
+.hero {
+    height: 100vh;
+    background: url('/images/hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* animatie ingevouwen via common .fade-in */
+  }
+  
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    margin-bottom: 0.5rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .highlight {
+    color: #e91e63;
+  }
+  
+  /* ===== Intro ===== */
+  /* .intro gebruikt common .fade-slide */
+  
+  /* ===== Gallery ===== */
+  /* .gallery gebruikt common .fade-zoom */
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 1rem;
+  }
+  .gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* ===== Motto ===== */
+  .motto-section {
+    background: #111;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .motto-link {
+    display: inline-block;
+    text-decoration: none;
+  }
+  .motto {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #e91e63;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .motto-link:hover .motto {
+    transform: scale(1.1) translateY(-5px);
+    color: #fff;
+  }
+  
+  /* ===== CTA ===== */
+  /* .cta gebruikt common .fade-in */
+/* ===== Hero ===== */
+.hero-content .social-list li a i {
+    font-size: 3rem; /* Groter iconen */
+  }
+  
+  /* ===== Intro ===== */
+  /* slideIn animatie via common fade-slide */
+  
+  /* ===== Gallery ===== */
+  /* zoomIn animatie via common fade-zoom */
+  /* gallery-grid styling ongewijzigd */
+  
+  /* ===== Motto ===== */
+  .motto {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #ddd;
+    transition: transform 0.3s, color 0.3s;
+  }
+  .motto-link:hover .motto {
+    transform: scale(1.1) translateY(-5px);
+    color: #fff;
+  }
+  
+  /* ===== CTA ===== */
+  /* .btn-sober uit common CSS */
+  
+  /* ===== Animaties ===== */
+  /* fadeIn, slideIn, zoomIn in common CSS */
+/* Maak zeker dat de Read-more niet alsnog een border heeft */
+.read-more {
+    text-decoration: none;
+    border-bottom: none;
+    color: inherit; /* behoud de kleur uit common */
+  }
+  
+  /* Iconen absoluut zonder onderstrepen */
+  .hero-content .social-list li a,
+  .footer-col .social-list li a {
+    text-decoration: none;
+  }
+/* Zorg dat ook in home-specifiek geen lijnen verschijnen */
+.btn-sober {
+    text-decoration: none;
+  }
+          

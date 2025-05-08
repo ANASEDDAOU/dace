@@ -1,0 +1,215 @@
+/* ========= Reset & Base ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #111;
+  color: #ddd;
+}
+
+/* ========= Navbar ========= */
+.site-header {
+  position: fixed; top: 0; width: 100%;
+  background: rgba(17,17,17,0.7); backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2%;
+}
+.logo {
+  font-size: 1.5rem; font-weight: bold; color: #fff;
+}
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+}
+.nav-toggle span {
+  width: 25px; height: 3px; background: #ddd;
+}
+.nav-list {
+  list-style: none; display: flex; gap: 2rem;
+}
+.nav-list li a {
+  color: #ddd; text-decoration: none; font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-list li a:hover {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-list {
+    position: fixed; top: 0; left: 50%;
+    transform: translate(-50%,-100%);
+    background: rgba(17,17,17,0.8); width:80%; height:100vh;
+    flex-direction: column; align-items: center;
+    padding-top: 4rem; gap: 1.5rem;
+    transition: transform 0.3s ease; z-index:1001;
+  }
+  .nav-list.active {
+    transform: translate(-50%, 0);
+  }
+}
+
+/* ========= Container ========= */
+.container {
+  width: 90%; max-width: 600px;
+  margin: 0 auto;
+  padding-top: 6rem; /* ruimte voor de header */
+  text-align: center;
+}
+
+/* ========= Animatie ========= */
+@keyframes fadeIn {
+  to { opacity:1; transform: translateY(0); }
+}
+.fade-in {
+  opacity: 0; transform: translateY(20px);
+  animation: fadeIn 0.8s forwards;
+}
+
+/* ========= Hero / Intro ========= */
+.hero {
+  padding: 4rem 0 2rem;
+}
+.hero-content h1 {
+  font-size: clamp(1.8rem,5vw,2.5rem);
+  color: #fff;
+}
+
+/* ========= Feedback Form ========= */
+.feedback-form {
+  display: flex; flex-direction: column; gap: 1rem;
+  margin-bottom: 2rem;
+}
+.feedback-form label {
+  text-align: left; color: #ccc; font-weight: 500;
+}
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: #ddd;
+  transition: border-color 0.2s;
+}
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  outline: none;
+  border-color: #e91e63;
+}
+
+/* Star rating */
+.rating {
+  display: flex; flex-direction: row-reverse; justify-content: center;
+}
+.rating input {
+  display: none;
+}
+.rating label {
+  font-size: 2rem;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+  color: #e91e63;
+}
+
+/* Submit button */
+.btn {
+  padding: 0.8rem 2rem;
+  border: 1px solid #ddd;
+  background: transparent;
+  color: #ddd;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, transform 0.1s;
+}
+.btn:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* ========= Feedback List ========= */
+.feedback-list {
+  display: flex; flex-direction: column; gap: 1rem;
+}
+.feedback-item {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  text-align: left;
+  color: #ccc;
+}
+.feedback-item h4 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.feedback-item .stars {
+  color: #e91e63;
+  margin-bottom: 0.5rem;
+}
+
+/* ========= Footer ========= */
+.site-footer {
+  background: #111; color: #ccc;
+  padding: 2rem 0 1rem; margin-top: 4rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 2rem; padding-bottom: 2rem;
+  border-bottom: 1px solid #333;
+}
+.footer-col h4 {
+  color: #fff; margin-bottom: 1rem;
+}
+.footer-col ul {
+  list-style: none; padding: 0;
+}
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+.footer-col ul li a {
+  color: #ccc; text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover {
+  color: #fff;
+}
+.footer-col p {
+  line-height: 1.5;
+}
+.footer-bottom {
+  text-align: center; padding-top: 1rem;
+  font-size: 0.9rem; color: #555;
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 480px) {
+  .container {
+    padding-top: 5rem;
+  }
+  .feedback-form,
+  .feedback-list {
+    gap: 0.75rem;
+  }
+}
+
+  

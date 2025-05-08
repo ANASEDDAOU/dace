@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dace – Winkelmandje</title>
+
+  <!-- FontAwesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+  <!-- Global styles -->
+  <link rel="stylesheet" href="/public/css/styles.css">
+  <!-- Cart-specific styles -->
+  <link rel="stylesheet" href="/public/css/cart.css">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">Dace</div>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalogus</a></li>
+        <li><a href="about.html">Over Ons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="cart-link">
+          <a href="cart.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1>Winkelmandje</h1>
+
+    <div id="cartItems" class="cart-items">
+      <!-- Wordt door cart.js gevuld -->
+    </div>
+
+    <div class="cart-summary">
+      <p>Subtotaal: €<span id="subtotal">0.00</span></p>
+      <p>BTW (21%): €<span id="tax">0.00</span></p>
+      <p>Totaal: €<span id="total">0.00</span></p>
+      <button id="checkoutBtn" class="btn-sober">Afrekenen</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Pagina’s</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalogus</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Winkelmandje</a></li>
+        </ul>
+      </div>
+      <!-- social & contact zoals hierboven -->
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Dace. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/burger.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/product.js"></script>
+
+</body>
+</html>

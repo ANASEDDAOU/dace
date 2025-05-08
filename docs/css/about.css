@@ -1,0 +1,200 @@
+/* /css/about/about.css */
+
+/* ========= Reset & Base ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #111;
+  color: #ddd;
+}
+
+/* ========= Navbar ========= */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(17,17,17,0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2%;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #ddd;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-list li a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s;
+}
+.nav-list li a:hover {
+  color: #fff;
+}
+
+@media(max-width:768px){
+  .nav-toggle { display:flex; }
+  .nav-list {
+    position: fixed;
+    top:0; left:50%;
+    transform: translate(-50%,-100%);
+    background: rgba(17,17,17,0.8);
+    width:80%; height:100vh;
+    flex-direction:column;
+    align-items:center;
+    padding-top:4rem;
+    gap:1.5rem;
+    transition:transform .3s ease;
+    z-index:1001;
+  }
+  .nav-list.active { transform: translate(-50%,0); }
+}
+
+/* ========= Container ========= */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 8rem 0; /* meer top space voor header */
+  text-align: center;
+}
+
+/* ========= Animatie ========= */
+@keyframes fadeIn {
+  to { opacity:1; transform: translateY(0); }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn .8s forwards;
+}
+
+/* ========= Over Ons Sectie ========= */
+.about h1 {
+  font-size: clamp(2rem,5vw,3rem);
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+.about p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-sober {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: .8rem 2rem;
+  border: 1px solid #ddd;
+  background: transparent;
+  color: #ddd;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color .2s, border-color .2s, transform .1s;
+  text-decoration: none;
+}
+.btn-sober:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.btn-sober:active {
+  transform: scale(.97);
+}
+
+/* ========= Footer ========= */
+.site-footer {
+  background: #111;
+  color: #555;
+  padding: 2rem 0 1rem;
+  margin-top: 4rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap:2rem;
+  padding-bottom:2rem;
+  border-bottom:1px solid #333;
+}
+.footer-col h4 {
+  color: #fff;
+  margin-bottom:1rem;
+}
+.footer-col ul {
+  list-style:none;
+  padding:0;
+}
+.footer-col ul li {
+  margin-bottom:.5rem;
+}
+.footer-col ul li a {
+  color:#ccc;
+  text-decoration:none;
+  transition: color .2s;
+}
+.footer-col ul li a:hover {
+  color:#fff;
+}
+.footer-col p {
+  line-height:1.5;
+}
+.footer-bottom {
+  text-align:center;
+  padding-top:1rem;
+  font-size:.9rem;
+}
+
+/* ========= Social Icons ========= */
+.social-list {
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  padding:0;
+  margin-top:1rem;
+}
+.social-list li a {
+  color:#ccc;
+  font-size:1.5rem;
+  transition:color .2s, transform .2s;
+}
+.social-list li a:hover {
+  color:#fff;
+  transform: scale(1.2);
+}
+
+/* ========= Responsive ========= */
+@media(max-width:480px){
+  .container { padding:6rem 0; }
+  .about p { margin:1rem auto; }
+  .footer-grid { grid-template-columns:1fr; text-align:center; }
+}

@@ -1,0 +1,125 @@
+</html><!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dace – Product</title>
+
+  <!-- FontAwesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  >
+
+  <!-- Product-pagina CSS -->
+  <link rel="stylesheet" href="/public/css/product.css">
+</head>
+
+<body>
+  <!-- ===== Header / Navbar ===== -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">Dace</div>
+      <div
+        class="nav-toggle"
+        onclick="document.querySelector('.nav-list').classList.toggle('active')"
+      >
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalogus</a></li>
+        <li><a href="about.html">Over Ons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html" class="cart-link">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container">
+    <div class="product-detail fade-in">
+      <img id="pd-image" src="" alt="" class="pd-image">
+      <div class="pd-info">
+        <h1 id="pd-title"></h1>
+        <p id="pd-price" class="pd-price"></p>
+        <button
+          id="addToCart"
+          class="btn-sober btn-add-cart"
+          data-id=""
+          data-title=""
+          data-price=""
+          data-image=""
+        >
+          In winkelmandje
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== Beschrijving & Specificaties ===== -->
+    <section class="product-extra fade-in">
+      <details open>
+        <summary>Beschrijving</summary>
+        <p id="pd-description" class="pd-description"></p>
+      </details>
+      <details>
+        <summary>Specificaties</summary>
+        <ul id="pd-specs" class="pd-specs">
+          <li>Materiaal: Katoen</li>
+          <li>Kleur: Zwart</li>
+          <li>Merk: Dace Originals</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- ===== Beoordelingen ===== -->
+    <section id="reviews" class="reviews-section fade-in">
+      <h2>Beoordelingen</h2>
+      <div id="reviewsList" class="reviews-list"></div>
+      <div class="feedbutton">
+        <a href="feedback.html" class="btn-sober">PLAATS REVIEW</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Pagina’s</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalog.html">Catalogus</a></li>
+          <li><a href="about.html">Over Ons</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Winkelmandje</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Volg ons</h4>
+        <ul class="social-list">
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>info@dace.com<br>+32 123 456 789</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Dace. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Scripts ===== -->
+  <script src="/public/js/burger.js"></script>
+  <script src="/public/js/product.js"></script>
+  <script src="/public/js/cart.js"></script> <!-- badge-updates -->
+</body>

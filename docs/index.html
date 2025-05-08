@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dace - Home</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Klassiek lettertype voor motto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="/public/css/styles.css">
+
+    <!-- Home-specifieke CSS -->
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <!-- 1) De logo als allereerste item -->
+            <div class="logo">Dace</div>
+
+            <!-- 2) Dan pas je burger-toggle -->
+            <div class="nav-toggle">
+                <span></span><span></span><span></span>
+            </div>
+
+            <!-- 3) En dan je lijst met links -->
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Cataloog</a></li>
+                <li><a href="about.html">Over Ons</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero fade-in">
+        <div class="hero-content">
+            <h1>Welkom bij Dace</h1>
+            <p>Ontdek onze <span class="highlight">streetwear</span> en
+                <span class="highlight">Vintage</span> items.
+            </p>
+            <ul class="social-list">
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.tiktok.com/r"><i class="fab fa-tiktok"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Motto-sectie -->
+    <section class="motto-section fade-in">
+        <div class="container">
+            <a href="about.html" class="motto-link">
+                <h2 class="motto">“Wear the Story, Live the Style”</h2>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Intro / Over Ons link -->
+    <section class="intro fade-slide">
+        <div class="container">
+            <p>
+                meer over ons
+                <a href="about.html" class="read-more"> &rarr;</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery met animatie én links naar catalogus -->
+    <section class="gallery fade-zoom">
+        <div class="container">
+            <div class="gallery-grid">
+                <a href="catalog.html" class="gallery-item-link">
+                    <figure class="gallery-item">
+                        <img src="/public/images/streetwear.png" alt="Streetwear item">
+                        <figcaption>Streetwear</figcaption>
+                    </figure>
+                </a>
+                <a href="catalog.html" class="gallery-item-link">
+                    <figure class="gallery-item">
+                        <img src="/public/images/VINTAGE.png" alt="Vintage item">
+                        <figcaption>Vintage</figcaption>
+                    </figure>
+                </a>
+                <a href="catalog.html" class="gallery-item-link">
+                    <figure class="gallery-item">
+                        <img src="/public/images/ACCESOIRE.jpg" alt="Accessoire item">
+                        <figcaption>Accessoire</figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Call-to-Action (sober) -->
+    <section class="cta fade-in">
+        <a href="catalog.html" class="btn-sober">Bekijk de Catalogus</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Pagina’s</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html">Catalogus</a></li>
+                    <li><a href="about.html">Over Ons</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Volg ons</h4>
+                <ul class="social-listfoot">
+                    <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.tiktok.com/r"><i class="fab fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>info@dace.com<br>+32 123 456 789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dace. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+    <script src="/public/js/burger.js"></script>
+
+    <script src="/public/js/app.js"></script>
+</body>
+
+</html>
