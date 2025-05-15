@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     { rootMargin: '0px 0px -100px 0px' }
   );
   document.querySelectorAll('.fade-in, .fade-zoom, .fade-slide')
-          .forEach(el => observer.observe(el));
+    .forEach(el => observer.observe(el));
 
   // ===== Form-handlers =====
-  ['contactForm','feedbackForm'].forEach(id => {
+  ['contactForm', 'feedbackForm'].forEach(id => {
     const f = document.getElementById(id);
     if (!f) return;
     f.addEventListener('submit', e => {
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== Products data (numerieke prijzen!) =====
   const products = [
-    { id:1,  title:'Ralph lauren',          price:49.99, image:'images/streetwear.png', description:'Warme hoodie in zwarte vintage stijl.' },
+    { id:1,  title:'Ralph lauren',          price:49.99, image:'../images/streetwear.png', description:'Warme hoodie in zwarte vintage stijl.' },
     { id:2,  title:'ralph lauren pant',     price:29.99, image:'../images/streetwear.png', description:'Basic tee met opvallende print.' },
     { id:3,  title:'Streetwear Jacket',     price:79.99, image:'../images/streetwear.png', description:'Stoer jack met meerdere zakken.' },
     { id:4,  title:'Streetwear Sneakers',   price:59.99, image:'../images/streetwear.png', description:'Comfortabele sneakers met retro look.' },
@@ -77,28 +77,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== Render per categorie =====
   [
-    { id:'streetwearGrid', start:0,  end:5  },
-    { id:'vintageGrid',    start:5,  end:10 },
-    { id:'accessoireGrid', start:10, end:products.length }
+    { id: 'streetwearGrid', start: 0, end: 5 },
+    { id: 'vintageGrid', start: 5, end: 10 },
+    { id: 'accessoireGrid', start: 10, end: products.length }
   ].forEach(cat => {
     const grid = document.getElementById(cat.id);
     if (!grid) return;
     products.slice(cat.start, cat.end)
-            .forEach(p => grid.appendChild(createCard(p)));
+      .forEach(p => grid.appendChild(createCard(p)));
   });
 
   // ===== Filter-knoppen =====
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-btn')
-              .forEach(b => b.classList.remove('active'));
+        .forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       const cat = btn.dataset.cat;
-      ['streetwear','vintage','accessoire']
+      ['streetwear', 'vintage', 'accessoire']
         .forEach(sec => {
           document.getElementById(sec)
-                  .classList.toggle('hidden',
-                    cat !== 'all' && cat !== sec);
+            .classList.toggle('hidden',
+              cat !== 'all' && cat !== sec);
         });
     });
   });
