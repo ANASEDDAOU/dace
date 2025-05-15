@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== Products data (numerieke prijzen!) =====
   const products = [
-    { id:1,  title:'Ralph lauren',          price:49.99, image:'../images/streetwear.png', description:'Warme hoodie in zwarte vintage stijl.' },
+    { id:1,  title:'Ralph lauren',          price:49.99, image:'images/streetwear.png', description:'Warme hoodie in zwarte vintage stijl.' },
     { id:2,  title:'ralph lauren pant',     price:29.99, image:'../images/streetwear.png', description:'Basic tee met opvallende print.' },
     { id:3,  title:'Streetwear Jacket',     price:79.99, image:'../images/streetwear.png', description:'Stoer jack met meerdere zakken.' },
     { id:4,  title:'Streetwear Sneakers',   price:59.99, image:'../images/streetwear.png', description:'Comfortabele sneakers met retro look.' },
