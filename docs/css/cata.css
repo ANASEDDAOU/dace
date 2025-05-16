@@ -39,7 +39,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(17, 17, 17, 0.459);
+    background: rgba(17, 17, 17, 0.684);
     backdrop-filter: blur(8px);
     display: none;
     flex-direction: column;
