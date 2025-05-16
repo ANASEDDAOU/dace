@@ -19,4 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-  
+  console.log("Burger script geladen");
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const navList = document.querySelector('.nav-list');
+  const body = document.body;
+
+  if (toggle && navList) {
+    toggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+      body.classList.toggle('no-scroll');
+      console.log("Burger geklikt! Actief:", navList.classList.contains("active"));
+    });
+  }
+});

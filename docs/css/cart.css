@@ -138,4 +138,45 @@
     height: auto;
     border-radius: 4px;
   }
+
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      margin-left: auto;
+    }
+  
+    .nav-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #ddd;
+      display: block;
+    }
+  
+    .nav-list {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(17, 17, 17, 0.453);
+      backdrop-filter: blur(8px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 1000;
+    }
+  
+    .nav-list.active {
+      display: flex;
+    }
+  
+    body.no-scroll {
+      overflow: hidden;
+    }
+  }
+  
     

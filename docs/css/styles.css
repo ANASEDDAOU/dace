@@ -84,13 +84,26 @@ body {
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: auto;
   }
+
+  .nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #ccc;
+    display: block;
+  }
+
   .nav-list {
+    display: none;
     position: fixed;
     top: 0; left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(17,17,17,0.95);
+    background: rgba(28, 28, 28, 0.464);
     backdrop-filter: blur(8px);
     flex-direction: column;
     align-items: center;
@@ -99,14 +112,17 @@ body {
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
   }
+
   .nav-list.active {
+    display: flex;
     transform: translateY(0);
   }
+
   .nav-list li {
     margin: 1.5rem 0;
   }
-  /* prevent background scroll when menu open */
-  .no-scroll {
+
+  body.no-scroll {
     overflow: hidden;
   }
 }
