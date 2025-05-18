@@ -115,7 +115,7 @@ body {
 /* ========= Hero ========= */
 .hero {
   height: 100vh;
-  background: url(../images/EBACK2.jpg) center/cover no-repeat;
+  background: url(images/EBACK2.jpg) center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
